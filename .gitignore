@@ -1,0 +1,8 @@
+__history/
+__recovery
+
+# Database file
+*.db
+
+# IDE
+ *.idea
