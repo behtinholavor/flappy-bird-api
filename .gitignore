@@ -3,6 +3,3 @@ __recovery
 
 # Database file
 *.db
-
-# IDE
- *.idea
