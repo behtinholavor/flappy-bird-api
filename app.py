@@ -86,8 +86,17 @@ class PlayerById(Resource):
         return result
 
 
+class PlayerByEmail(Resource):
+    def get(self, email):
+        conn = db_connect.connect()
+        query = conn.execute("select * from players where email ='{0}' ".format(email))
+        result = [dict(zip(tuple(query.keys()), i)) for i in query.cursor]
+        return result
+
+
 api.add_resource(Players, '/players')
-api.add_resource(PlayerById, '/players/<id>')
+api.add_resource(PlayerById, '/players/id/<id>')
+api.add_resource(PlayerByEmail, '/players/email/<email>')
 
 if __name__ == '__main__':
     app.run(debug=True)
