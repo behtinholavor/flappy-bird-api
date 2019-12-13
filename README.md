@@ -1,4 +1,4 @@
-<h1 id="foobar">Flappy Bird</h1>
+<h1 id="foobar">Flappy Bird API</h1>
 <p>Flappy Bird api is an application program interface that provides access to the game itself and keeps the ranking data updated as per the players score.</p>
 
 <h2 id="installation">Installation</h2>
